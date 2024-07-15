@@ -91,6 +91,12 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  opacity: 1;
+}
+
+
+.main-content {
+  opacity: 0;
 }
 /* !initial Load  close*/
 
