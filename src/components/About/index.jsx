@@ -8,23 +8,23 @@ const About = () => {
   const container = useRef(null);
   //Register plugin
   gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    const el = container.current;
-    gsap.fromTo(
-      ".about__container",
-      {
-        scale: 0.7,
-      },
-      {
-        scale: 1,
-        scrollTrigger: {
-          trigger: el,
-          scrub: true,
-          markers: false,
-        },
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   const el = container.current;
+  //   gsap.fromTo(
+  //     ".about__container",
+  //     {
+  //       scale: 0.7,
+  //     },
+  //     {
+  //       scale: 1,
+  //       scrollTrigger: {
+  //         trigger: el,
+  //         scrub: true,
+  //         markers: false,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   return (
     <section ref={container} id="about">
@@ -39,13 +39,11 @@ const About = () => {
           <h1 className="title">
             I am <span className="color__primary">N Prasanth Kumar</span>
           </h1>
-          <p className="text__muted description">
-            Experienced Full Stack Developer with a passion for creating
-            dynamic, intuitive, and responsive applications. Proficient in
-            multiple programming languages and frameworks, as well as database
-            design and management. Strong problem-solving and analytical skills,
-            and a track record of delivering high-quality code on time and on
-            budget.
+          <p className="text__muted description about_description">
+            I am a self-taught Full-stack developer with a strong passion for
+            coding and a dedication to continuous learning. I have gained my
+            skills through various online platforms, including freeCodeCamp,
+            Coursera, YouTube, and official documentation like MDN Web Docs.
           </p>
           <button className="btn btn__primary">Read more</button>
         </div>

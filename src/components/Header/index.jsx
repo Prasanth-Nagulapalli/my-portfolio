@@ -74,7 +74,14 @@ const Header = () => {
             </div>
             <Facts />
             <div className="header__info__bottom">
-              <button className="btn">Download CV</button>
+              <a
+                href="/prasanth_resume.pdf"
+                download="prasanth_resume.pdf"
+                className="btn"
+              >
+                Download CV
+              </a>
+
               <a href="prasanth.ragava@gmail.com" className="btn">
                 Email Me
               </a>
