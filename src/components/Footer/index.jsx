@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
          <div className="copyright__container">
              <h3>Copyright &copy; All right reserved -  | 2024</h3>
-             <p className="text__muted">Built with love by Emmanuel Eze Adinuba </p>
+             <p className="text__muted">Built with love by N Prasanth Kumar </p>
           </div>
        </div>
 

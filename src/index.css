@@ -83,6 +83,17 @@ img {
   object-fit: cover;
 }
 
+/* !initial Load */
+.initial__load {
+  /* border: 2px solid white; */
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+/* !initial Load  close*/
+
 .btn {
   padding: 15px 25px;
   border-radius: var(--border-radius-5);

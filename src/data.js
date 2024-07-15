@@ -213,24 +213,100 @@ export const projects = [
   },
 ];
 
+// export const experience = [
+//   {
+//     title: "Frontend Development",
+//     data: [
+//       {
+//         skill: "HTML",
+//         level: "Experienced",
+//       },
+//       {
+//         skill: "CSS",
+//         level: "Experienced",
+//       },
+//       {
+//         skill: "JavaScript",
+//         level: "Experienced",
+//       },
+//       {
+//         skill: "React",
+//         level: "Experienced",
+//       },
+//       {
+//         skill: "Tailwind",
+//         level: "Intermediate",
+//       },
+//       {
+//         skill: "GSAP",
+//         level: "Beginner",
+//       },
+//     ],
+//   },
+//   {
+//     title: "Backend Development",
+//     data: [
+//       {
+//         skill: "Node JS",
+//         level: "Intermediate",
+//       },
+//       {
+//         skill: "Express JS",
+//         level: "Intermediate",
+//       },
+//       {
+//         skill: "MangoDB",
+//         level: "Intermediate",
+//       },
+//       // {
+//       //   skill: "PHP",
+//       //   level: "Experienced",
+//       // },
+//       // {
+//       //   skill: "Python",
+//       //   level: "Intermediate",
+//       // },
+//       // {
+//       //   skill: "MySQL",
+//       //   level: "Experienced",
+//       // },
+//     ],
+//   },
+//   {
+//     title: "Tools",
+//     data: [
+//       {
+//         skill: "Vs Code",
+//         level: "Experienced",
+//       },
+//       {
+//         skill: "Git",
+//         level: "Intermediate",
+//       },
+//       {
+//         skill: "Postman",
+//         level: "Intermediate",
+//       },
+//       {
+//         skill: "Docker",
+//         level: "Intermediate",
+//       },
+//       {
+//         skill: "Figma",
+//         level: "Intermediate",
+//       },
+//       {
+//         skill: "Canva",
+//         level: "Intermediate",
+//       },
+//     ],
+//   },
+// ];
+
+
+
+
 export const experience = [
-  {
-    title: "UI/UX",
-    data: [
-      {
-        skill: "Figma",
-        level: "Experienced",
-      },
-      {
-        skill: "Sketch",
-        level: "Intermediate",
-      },
-      {
-        skill: "XD",
-        level: "Intermediate",
-      },
-    ],
-  },
   {
     title: "Frontend Development",
     data: [
@@ -247,20 +323,16 @@ export const experience = [
         level: "Experienced",
       },
       {
-        skill: "Tailwind",
-        level: "Intermediate",
-      },
-      {
-        skill: "Bootstrap",
-        level: "Experienced",
-      },
-      {
         skill: "React",
         level: "Experienced",
       },
       {
-        skill: "React Native",
-        level: "Experienced",
+        skill: "Tailwind",
+        level: "Intermediate",
+      },
+      {
+        skill: "GSAP",
+        level: "Beginner",
       },
     ],
   },
@@ -268,28 +340,50 @@ export const experience = [
     title: "Backend Development",
     data: [
       {
-        skill: "Node JS",
-        level: "Experienced",
-      },
-      {
-        skill: "MangoDB",
+        skill: "Node.js",
         level: "Intermediate",
       },
       {
-        skill: "PHP",
-        level: "Experienced",
-      },
-      {
-        skill: "Python",
+        skill: "Express.js",
         level: "Intermediate",
       },
       {
-        skill: "MySQL",
+        skill: "MongoDB",
+        level: "Intermediate",
+      },
+    ],
+  },
+  {
+    title: "Tools",
+    data: [
+      {
+        skill: "VS Code",
         level: "Experienced",
+      },
+      {
+        skill: "Git",
+        level: "Intermediate",
+      },
+      {
+        skill: "Postman",
+        level: "Intermediate",
+      },
+      {
+        skill: "Docker",
+        level: "Intermediate",
+      },
+      {
+        skill: "Figma",
+        level: "Intermediate",
+      },
+      {
+        skill: "Canva",
+        level: "Intermediate",
       },
     ],
   },
 ];
+
 
 export const socialHandles = [
   {
