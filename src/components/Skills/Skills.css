@@ -4,8 +4,19 @@
     gap: 20px;
 }
 
+/* presepective trail */
 
+#skill .skill__container, #skill {
+    perspective: 1000px;
+  }
+  
+  /* Optional: style for the skill card */
+  .skill__card,#skill {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
 
+/*  presepective trail */
 
 
 /* ======= MEDIA QUERIES (MEDIUM DEVICES) */

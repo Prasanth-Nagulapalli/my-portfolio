@@ -100,7 +100,7 @@
 // export default App;
 
 // ? trail 2
-
+// ? woking fine transition 1
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
@@ -120,7 +120,7 @@ function App() {
     setTimeout(() => {
       gsap.to(".initial__load", {
         opacity: 0,
-        duration: 0.6,
+        duration: .4,
         onComplete: () => setLoading(false),
       });
     }, 1600);
@@ -139,16 +139,18 @@ function App() {
           <Initial />
         </div>
       ) : (
-        <div className="main-content">
+        <>
           <Navbar />
-          <Header />
-          <About />
-          <Services />
-          <Skills />
-          <Projects />
-          <Contact />
-          <Footer />
-        </div>
+          <div className="main-content" style={{overflowX:"hidden"}}>
+            <Header />
+            <About />
+            <Services />
+            <Skills />
+            <Projects />
+            <Contact />
+            <Footer />
+          </div>
+        </>
       )}
     </div>
   );

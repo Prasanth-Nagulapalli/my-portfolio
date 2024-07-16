@@ -94,7 +94,6 @@ img {
   opacity: 1;
 }
 
-
 .main-content {
   opacity: 0;
 }
@@ -157,6 +156,12 @@ img {
   max-width: 1190px;
   margin: auto;
   padding: 80px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .section__wrapper {
+    padding: 50px 20px;
+  }
 }
 
 .icon__container {

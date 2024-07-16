@@ -3,9 +3,14 @@ import "./About.css";
 import { profile2 } from "../../images";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { useScreenSize } from "../../customHooks";
 const About = () => {
   const container = useRef(null);
+  // const { screenWidth } = useScreenSize().screenSize;
+
+  const { screenSize } = useScreenSize();
+  const { screenWidth } = screenSize;
+
   //Register plugin
   gsap.registerPlugin(ScrollTrigger);
   // useEffect(() => {
@@ -26,6 +31,64 @@ const About = () => {
   //   );
   // }, []);
 
+  useEffect(() => {
+    const el = container.current;
+    gsap.fromTo(
+      ".about__container",
+      {
+        scale: 0.5,
+      },
+      {
+        scale: 1,
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          end: "top 25%",
+          scrub: true,
+          // markers: false,
+        },
+      }
+    );
+    gsap.fromTo(
+      ".about__container .primary__title",
+      {
+        // y:  -240,
+        y: screenWidth > 850 ? -240 : -200,
+        opacity: 0.6,
+      },
+
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          end: "top 20%", // End when the top of the about__container hits 50% from the top of the viewport
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".about__container .photo__container",
+      {
+        rotate: 40,
+      },
+
+      {
+        rotate: 0,
+        scrollTrigger: {
+          trigger: el,
+          start: "top bottom",
+          end: "top 10%", // End when the top of the about__container hits 50% from the top of the viewport
+          scrub: true,
+          // markers: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <section ref={container} id="about">
       <div className="section__wrapper about__container">
@@ -36,14 +99,18 @@ const About = () => {
         </div>
         <div className="section__header">
           <h4 className="primary__title">About Me</h4>
-          <h1 className="title">
+          <h1 className="title about__title">
             I am <span className="color__primary">N Prasanth Kumar</span>
           </h1>
           <p className="text__muted description about_description">
             I am a self-taught Full-stack developer with a strong passion for
             coding and a dedication to continuous learning. I have gained my
-            skills through various online platforms, including freeCodeCamp,
-            Coursera, YouTube, and official documentation like MDN Web Docs.
+            skills through various online platforms, including{" "}
+            <span className="about__highlight__text">freeCodeCamp</span> ,
+            <span className="about__highlight__text">Coursera </span> ,{" "}
+            <span className="about__highlight__text">YouTube </span>, and
+            official documentation like{" "}
+            <span className="about__highlight__text">MDN Web Docs </span> .
           </p>
           <button className="btn btn__primary">Read more</button>
         </div>

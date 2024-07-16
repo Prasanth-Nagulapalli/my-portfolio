@@ -22,8 +22,8 @@
   border-radius: var(--border-radius-4);
   border: 2px solid var(--color-primary);
   overflow: hidden;
-  transform: rotate(-7deg);
-  transition: var(--transition);
+  /* transform: rotate(-7deg); */
+  /* transition: var(--transition); */
 }
 
 #about .photo__container:hover {
@@ -37,7 +37,7 @@
     #about .about__container {
        place-items: center;
       }
-  .about_description {
+#about  .about_description {
     word-spacing:4px;
    letter-spacing: 0.5px;
     font-size: 22px;
@@ -47,6 +47,9 @@
     line-clamp: 8;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  #about .about__highlight__text{
+    color: var(--color-text);
   }
 }
 
@@ -63,4 +66,27 @@
     width: 100%;
     max-width: 400px;
   }
+
+
+  #about  .about_description {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.85;
+    font-size: 17px;
+    font-weight: 500;
+
+    
+  }
+ 
+  #about .about__title{
+    text-align: left;
+  }
+
+
+  #about .about__highlight__text{
+    color: var(--color-muted);
+  }
 }
+
+
