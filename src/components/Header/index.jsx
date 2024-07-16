@@ -1,11 +1,32 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { profile1 } from "../../images";
 import Facts from "./Facts";
 import "./Header.css";
-
+import { useScreenSize } from "../../customHooks";
 const Header = () => {
+  const { showCursor, setShowCursor } = useScreenSize();
+  const [isOn, setIsOn] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (!isOn && !showCursor) {
+      setShowCursor(true);
+    }
+  };
+  const handleMouseLeave = () => {
+    if (!isOn && showCursor) {
+      setShowCursor(false);
+    } else if (isOn && showCursor) {
+      setShowCursor(true);
+    }
+  };
+
+  const handleCursorClick = () => {
+    // setShowCursor(!showCursor);
+    setIsOn(!isOn);
+  };
+
   const container = useRef();
   gsap.registerPlugin(useGSAP);
   // const timeline = gsap.timeline();
@@ -52,6 +73,7 @@ const Header = () => {
     },
     { scope: container }
   );
+
   return (
     <header id="header" className="blur-effect" ref={container}>
       <div className="stroke__text intro__text">HELLO</div>
@@ -82,9 +104,17 @@ const Header = () => {
                 Download CV
               </a>
 
-              <a href="prasanth.ragava@gmail.com" className="btn">
-                Email Me
-              </a>
+              <button
+                // className="btn"
+                className={showCursor && isOn ? "btn btn__primary" : "btn"}
+                onClick={handleCursorClick}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                style={{ cursor: showCursor ? "crosshair" : "auto" }}
+              >
+                {/* Email Me */}
+                Set Cursor
+              </button>
             </div>
           </div>
         </div>

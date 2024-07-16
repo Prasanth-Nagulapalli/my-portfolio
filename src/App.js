@@ -112,19 +112,23 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Initial from "./components/initialLoad";
 import { gsap } from "gsap";
-
+import CustomCursor from "./customHooks/Cursor/CustomCursor";
+import { useScreenSize } from "./customHooks";
 function App() {
   const [loading, setLoading] = useState(true);
+
+  const { showCursor, setShowCursor } = useScreenSize();
 
   useEffect(() => {
     setTimeout(() => {
       gsap.to(".initial__load", {
         opacity: 0,
-        duration: .4,
+        duration: 0.4,
         onComplete: () => setLoading(false),
       });
+      setShowCursor(false);
     }, 1600);
-  }, []);
+  }, [setShowCursor]);
 
   useEffect(() => {
     if (!loading) {
@@ -137,11 +141,12 @@ function App() {
       {loading ? (
         <div className="initial__load">
           <Initial />
+          <CustomCursor />
         </div>
       ) : (
         <>
           <Navbar />
-          <div className="main-content" style={{overflowX:"hidden"}}>
+          <div className="main-content" style={{ overflowX: "hidden" }}>
             <Header />
             <About />
             <Services />
@@ -150,6 +155,7 @@ function App() {
             <Contact />
             <Footer />
           </div>
+          {showCursor && <CustomCursor />}
         </>
       )}
     </div>

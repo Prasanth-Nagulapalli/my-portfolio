@@ -334,6 +334,7 @@
 // export default Services;
 
 // ? want little delay
+// ? successfull
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";

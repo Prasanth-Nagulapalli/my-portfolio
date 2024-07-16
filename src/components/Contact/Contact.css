@@ -4,6 +4,18 @@
     gap: 20px;
 }
 
+
+/* trail version */
+#contact{
+    /* border: 2px solid white; */
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+#contact h1 {
+    transform: translateZ(100px);
+    transition: transform 0.5s ease-in-out;
+  }
+/* trail version close */
 #contact .section__header{
     flex: 1;
 }
