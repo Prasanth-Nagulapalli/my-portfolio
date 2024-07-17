@@ -5,6 +5,7 @@
   transition: background 200ms, border 200ms;
   border-radius: var(--border-radius-3);
   background: rgba(var(--card-rgb), 0.1);
+  /* border-color: var(--color-primary); */
 }
 
 .skill__card:hover {

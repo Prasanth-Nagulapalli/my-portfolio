@@ -26,6 +26,13 @@
   /* transition: var(--transition); */
 }
 
+
+#about .photo__container img{
+ filter: brightness(0.9);
+ /* opacity: 0.9; */
+}
+
+
 #about .photo__container:hover {
   transform: rotate(0);
 }

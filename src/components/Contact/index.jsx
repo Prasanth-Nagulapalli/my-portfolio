@@ -181,7 +181,7 @@ const Contact = () => {
           y: 0,
           opacity: 1,
           scrollTrigger: {
-            trigger: screenWidth > 850 ? el : formRef.current,
+            trigger: screenWidth > 1024 ? el : formRef.current,
             start: "top bottom",
             toggleActions: "play none none reset",
             ease: "linear",

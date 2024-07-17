@@ -1,12 +1,13 @@
 import { DiReact } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
-import { SiExpress, SiMongodb } from "react-icons/si";
-import { SiFiverr } from "react-icons/si";
+import { SiExpress, SiMongodb, SiUpwork } from "react-icons/si";
+// import { SiFiverr } from "react-icons/si";
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
-import { CgFigma } from "react-icons/cg";
-import { TbBrandReactNative } from "react-icons/tb";
-import { SiAdobexd } from "react-icons/si";
-
+// import { FaSquareUpwork } from "react-icons/fa6";
+// import { CgFigma } from "react-icons/cg";
+// import { TbBrandReactNative } from "react-icons/tb";
+// import { SiAdobexd } from "react-icons/si";
+import { Littlelemon } from "./images";
 export const menu = [
   { name: "About" },
   { name: "Services" },
@@ -24,10 +25,10 @@ export const projects = [
   //     "https://cdn.dribbble.com/userupload/10064191/file/original-091c06a630285b93a5f81e29e882fe3c.png",
   //   category: "UI/UX",
   //   data: {
-  //     description: `Transforming education with AI, our School UI Design project revolutionizes the 
-  //                      learning experience. Seamlessly integrating intelligent features, personalized interfaces, 
-  //                      and intuitive navigation, our design empowers educators and students alike. Experience 
-  //                      innovation at its finest as we pave the way for a smarter, more efficient educational 
+  //     description: `Transforming education with AI, our School UI Design project revolutionizes the
+  //                      learning experience. Seamlessly integrating intelligent features, personalized interfaces,
+  //                      and intuitive navigation, our design empowers educators and students alike. Experience
+  //                      innovation at its finest as we pave the way for a smarter, more efficient educational
   //                      journey.`,
   //     demoLink: "https://google.com/",
   //   },
@@ -39,19 +40,57 @@ export const projects = [
   //     },
   //   ],
   // },
+  // {
+  //   id: 2,
+  //   title: "E-Commerce Application",
+  //   // image:
+  //   //   "https://cdn.dribbble.com/userupload/8002230/file/original-c8eec16edea4d5c836b2bfabe7fbaa5a.jpg",
+  //   image:
+  //   Littlelemon,
+  //   category: "Web",
+  //   data: {
+  //     description: `Enhance your online shopping experience with our E-Commerce Application
+  //       UI design project. Seamlessly blending aesthetics with functionality, our intuitive
+  //       interface offers easy navigation, personalized recommendations, and secure
+  //       transactions. Elevate your digital storefront and captivate customers with a visually
+  //       stunning design tailored to your brand`,
+  //     demoLink: "https://google.com/",
+  //   },
+  //   stack: [
+  //     {
+  //       name: "ReactJs",
+  //       icon: <DiReact />,
+  //       iconColor: "skyblue",
+  //     },
+  //     {
+  //       name: "NodeJs",
+  //       icon: <FaNodeJs />,
+  //       iconColor: "green",
+  //     },
+  //     {
+  //       name: "ExpressJs",
+  //       icon: <SiExpress />,
+  //     },
+  //     {
+  //       name: "MongoDB",
+  //       icon: <SiMongodb />,
+  //       iconColor: "limegreen",
+  //     },
+  //   ],
+  // },
+
   {
     id: 2,
-    title: "E-Commerce Application",
-    image:
-      "https://cdn.dribbble.com/userupload/8002230/file/original-c8eec16edea4d5c836b2bfabe7fbaa5a.jpg",
+    title: "Little Lemon - Table Booking & Online Ordering Application",
+    image: Littlelemon,
     category: "Web",
     data: {
-      description: `Enhance your online shopping experience with our E-Commerce Application 
-        UI design project. Seamlessly blending aesthetics with functionality, our intuitive 
-        interface offers easy navigation, personalized recommendations, and secure 
-        transactions. Elevate your digital storefront and captivate customers with a visually 
-        stunning design tailored to your brand`,
-      demoLink: "https://google.com/",
+      description: `Experience seamless dining with Little Lemon, our comprehensive table booking 
+        and online ordering application. Designed to simplify restaurant management and enhance 
+        customer convenience, this project integrates an intuitive UI with robust functionality. 
+        Book tables, order meals, and enjoy a smooth user experience that brings your dining service 
+        into the digital age.`,
+      demoLink: "https://littlelemon-resto.netlify.app/",
     },
     stack: [
       {
@@ -59,22 +98,23 @@ export const projects = [
         icon: <DiReact />,
         iconColor: "skyblue",
       },
-      {
-        name: "NodeJs",
-        icon: <FaNodeJs />,
-        iconColor: "green",
-      },
-      {
-        name: "ExpressJs",
-        icon: <SiExpress />,
-      },
-      {
-        name: "MongoDB",
-        icon: <SiMongodb />,
-        iconColor: "limegreen",
-      },
+      // {
+      //   name: "NodeJs",
+      //   icon: <FaNodeJs />,
+      //   iconColor: "green",
+      // },
+      // {
+      //   name: "ExpressJs",
+      //   icon: <SiExpress />,
+      // },
+      // {
+      //   name: "MongoDB",
+      //   icon: <SiMongodb />,
+      //   iconColor: "limegreen",
+      // },
     ],
   },
+
   // {
   //   id: 3,
   //   title: "Robotic Engineering Web Application",
@@ -83,9 +123,9 @@ export const projects = [
   //   category: "Web",
   //   data: {
   //     description: `Unlock the future of robotics with our Robotic Engineering Web Application
-  //       project. Seamlessly integrating cutting-edge technology, data analytics, 
-  //       and collaborative tools, our platform empowers engineers to design, simulate, 
-  //       and optimize robotic systems. Experience innovation at its peak as we redefine the 
+  //       project. Seamlessly integrating cutting-edge technology, data analytics,
+  //       and collaborative tools, our platform empowers engineers to design, simulate,
+  //       and optimize robotic systems. Experience innovation at its peak as we redefine the
   //       boundaries of robotic engineering.`,
   //     demoLink: "https://google.com/",
   //   },
@@ -181,11 +221,11 @@ export const projects = [
   //     "https://i.pinimg.com/originals/b3/35/02/b33502e465346ace2a7f1df203d851a3.jpg",
   //   category: "Apps",
   //   data: {
-  //     description: `Elevate engagement and knowledge retention with our Quiz App 
-  //                     Development project. Seamlessly crafted for interactive learning 
-  //                     experiences, our app offers customizable quizzes, real-time feedback, 
+  //     description: `Elevate engagement and knowledge retention with our Quiz App
+  //                     Development project. Seamlessly crafted for interactive learning
+  //                     experiences, our app offers customizable quizzes, real-time feedback,
   //                     and captivating visuals. Empower users to test their knowledge anytime,
-  //                      anywhere, fostering a dynamic learning environment tailored to their 
+  //                      anywhere, fostering a dynamic learning environment tailored to their
   //                      needs.`,
   //     demoLink: "https://google.com/",
   //   },
@@ -303,9 +343,6 @@ export const projects = [
 //   },
 // ];
 
-
-
-
 export const experience = [
   {
     title: "Frontend Development",
@@ -384,26 +421,25 @@ export const experience = [
   },
 ];
 
-
 export const socialHandles = [
   {
-    name: "Fiverr",
-    icon: <SiFiverr />,
-    link: "",
+    name: "upwork",
+    icon: <SiUpwork />,
+    link: "https://www.upwork.com/freelancers/~0151b2bd22d1aae643",
   },
   {
     name: "Github",
     icon: <AiFillGithub />,
-    link: "",
+    link: "https://github.com/Prasanth-Nagulapalli",
   },
   {
     name: "LinkedIn",
     icon: <AiFillLinkedin />,
-    link: "",
+    link: "https://www.linkedin.com/in/prasanth-n-612312252/",
   },
   {
     name: "Youtube",
     icon: <AiFillYoutube />,
-    link: "https://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1",
+    link: "https://www.youtube.com/@TechstackTelugu",
   },
 ];
