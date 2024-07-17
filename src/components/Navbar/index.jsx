@@ -69,7 +69,7 @@ const Navbar = () => {
 
         <div
           className="logo__container"
-          onClick={() => scroll.scrollToTop({ duration: 500 })}
+          onClick={() => scroll.scrollToTop({ duration: 900 })}
         >
           <span>P</span>
           <span>K</span>
@@ -85,11 +85,13 @@ const Navbar = () => {
             <Link
               activeClass="active"
               className="tab__item name"
-              to={list.name.toLowerCase()}
+              // to={list.name.toLowerCase()}
+              to={list.name === "Home" ? "header" : list.name.toLowerCase()}
               spy={true}
               smooth={true}
-              offset={-70}
-              duration={500}
+              // offset={-70}
+              offset={-75}
+              duration={600}
               key={index}
             >
               {list.name}

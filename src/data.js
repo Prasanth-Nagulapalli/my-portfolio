@@ -9,11 +9,12 @@ import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 // import { SiAdobexd } from "react-icons/si";
 import { Littlelemon } from "./images";
 export const menu = [
+  { name: "Home" },
   { name: "About" },
   { name: "Services" },
   { name: "Skill" },
   { name: "Projects" },
-  { name: "Testimonial" },
+  // { name: "Testimonial" },
   { name: "Contact" },
 ];
 
