@@ -157,7 +157,7 @@ const Contact = () => {
           rotateX: 0,
           delay: 0.2,
           duration: 0.8,
-          ease: "bounce.out",
+          // ease: "bounce.out",
           scrollTrigger: {
             trigger: el,
             start: "top 90%",

@@ -206,7 +206,7 @@ const Skills = () => {
       gsap.fromTo(
         titleRef.current,
         {
-          x: -200,
+          x: -120,
           opacity: 0.6,
         },
         {
@@ -216,7 +216,7 @@ const Skills = () => {
           scrollTrigger: {
             trigger: el,
             start: "top bottom",
-            end: "top 35%",
+            end: "top 40%",
             scrub: true,
             ease: "linear",
           },
@@ -236,15 +236,15 @@ const Skills = () => {
             opacity: 0,
           },
           {
-            // delay:.21,
             rotationY: 0,
             opacity: 1,
             duration: 1.5,
 
             scrollTrigger: {
               trigger: skill,
-              start: "top bottom",
-              toggleActions: "play none none reset",
+              // start: "top bottom",
+              start: screenWidth > 500 ? "top 75%" : "top 80%",
+              toggleActions: "play none none reverse",
             },
           }
         );
