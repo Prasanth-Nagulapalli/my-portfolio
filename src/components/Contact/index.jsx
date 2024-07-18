@@ -100,7 +100,7 @@
 
 // ? trail for animations
 
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Contact.css";
@@ -116,6 +116,52 @@ const Contact = () => {
   const formRef = useRef(null);
   const serviceRefs = useRef([]);
   const descRef = useRef();
+
+  // form submit
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // form submit
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "9084a03f-ce8d-405b-aa45-9e0dbf9e05cf");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json());
+
+      if (res.success) {
+        alert("Message sent Successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
+  // form submit closed
 
   //gsap
   useEffect(() => {
@@ -162,7 +208,6 @@ const Contact = () => {
             trigger: contactRef.current,
             start: "top 90%",
             toggleActions: "play none none reverse",
-            markers: true,
           },
         }
       );
@@ -317,7 +362,7 @@ const Contact = () => {
           </div>
           {/* END OF CONTACT OPTION */}
 
-          <form /* ref={form} onSubmit={sendEmail} */ ref={formRef}>
+          {/* <form  ref={formRef}>
             <input
               type="text"
               name="name"
@@ -339,7 +384,67 @@ const Contact = () => {
             <button type="submit" className="btn btn__primary">
               Send Message
             </button>
+          </form> */}
+
+          {/* web3form */}
+          <form onSubmit={onSubmit} ref={formRef}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              rows="7"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button type="submit" className="btn btn__primary">
+              Send Message
+            </button>
           </form>
+
+          {/* web3form  closed*/}
+
+          {/* web3form */}
+          {/* <form onSubmit={onSubmit} ref={formRef}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="7"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit" className="btn btn__primary">
+              Send Message
+            </button>
+          </form> */}
+
+          {/* web3form  closed */}
         </div>
       </div>
     </section>
