@@ -663,13 +663,14 @@ const Services = () => {
             {
               x: 0,
               opacity: 1,
-              delay: 0.2,
+              // delay: 0.2,
               duration: 0.6,
               scrollTrigger: {
                 trigger: service,
-                start: "top 90%",
-                toggleActions: "play none none reset",
+                start: "top 80%",
+                toggleActions: "play none none reverse",
                 ease: "linear",
+                // markers:true
               },
             }
           );
@@ -690,9 +691,8 @@ const Services = () => {
             Services
           </h2>
           <h3 ref={descriptionRef} className="text__muted description">
-            I transform your ideas, and consequently your desires, into a
-            distinctive web project that both inspires you and captivates your
-            customers.
+            I transform your innovative ideas into distinctive, high-quality web
+            projects that inspire you and captivate your customers.
           </h3>
         </div>
         <div className="services__group">

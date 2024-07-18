@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { profile1 } from "../../images";
+import { profile1, profileheader } from "../../images";
 import Facts from "./Facts";
 import "./Header.css";
 import { useScreenSize } from "../../customHooks";
@@ -89,9 +89,7 @@ const Header = () => {
                 I'M A WEB DEVELOPER
               </h1>
               <p className="header__decription text__muted">
-                I dissect intricate user experience challenges to engineer
-                integrity-focused solutions that resonate with billions of
-                users.
+              "I build intuitive web applications, turning complex requirements into seamless user experiences."
               </p>
             </div>
             <Facts />
@@ -120,7 +118,7 @@ const Header = () => {
         </div>
         <div className="column profile__wrapper">
           <div className="profile__photo__container">
-            <img src={profile1} alt="" className="profile__photo" />
+            <img src={profileheader} alt="" className="profile__photo" />
           </div>
         </div>
       </div>

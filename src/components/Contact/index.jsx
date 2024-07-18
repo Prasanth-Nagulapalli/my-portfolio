@@ -129,14 +129,14 @@ const Contact = () => {
           opacity: 0,
         },
         {
-          delay: 0.2,
+          delay: 0.3,
           y: 0,
           opacity: 1,
           duration: 0.4,
           scrollTrigger: {
             trigger: descRef.current,
             start: "top 90%",
-            toggleActions: "play none none reset",
+            toggleActions: "play none none reverse",
             ease: "linear",
           },
         }
@@ -155,13 +155,14 @@ const Contact = () => {
           scale: 1,
           opacity: 1,
           rotateX: 0,
-          delay: 0.2,
+          delay: 0.3,
           duration: 0.8,
           // ease: "bounce.out",
           scrollTrigger: {
-            trigger: el,
+            trigger: contactRef.current,
             start: "top 90%",
-            toggleActions: "play none none reset",
+            toggleActions: "play none none reverse",
+            markers: true,
           },
         }
       );
@@ -170,7 +171,7 @@ const Contact = () => {
       gsap.fromTo(
         formRef.current,
         {
-          opacity: 0.6,
+          opacity: 0,
           rotateY: 120,
         },
         {
@@ -181,9 +182,9 @@ const Contact = () => {
           y: 0,
           opacity: 1,
           scrollTrigger: {
-            trigger: screenWidth > 1024 ? el : formRef.current,
-            start: "top bottom",
-            toggleActions: "play none none reset",
+            trigger: screenWidth > 1024 ? formRef.current : formRef.current,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
             ease: "linear",
             // markers:true
           },
@@ -206,9 +207,10 @@ const Contact = () => {
               duration: 0.4,
               scrollTrigger: {
                 trigger: service,
-                start: "top 98%",
-                toggleActions: "play none none reset",
+                start: "top 90%",
+                toggleActions: "play none none reverse",
                 ease: "linear",
+                // markers: true,
               },
             }
           );
@@ -229,8 +231,8 @@ const Contact = () => {
               duration: 0.5,
               scrollTrigger: {
                 trigger: service,
-                start: "top 95%",
-                toggleActions: "play none none reset",
+                start: "top 90%",
+                toggleActions: "play none none reverse",
                 ease: "linear",
               },
             }
@@ -252,10 +254,10 @@ const Contact = () => {
             Contact Me
           </h2>
           <div className="text__muted description" ref={descRef}>
-            Ready to take your digital presence to the next level? Whether
-            you're looking to launch a new website, revamp an existing one, or
-            need expert advice on the best web technologies, I'm here to help.
-            Reach out to discuss your project, ask questions, or just say hello.
+            Ready to elevate your digital presence? Whether you're starting a
+            new website, refreshing an existing one, or seeking expert guidance
+            on web technologies, I'm here to assist. Contact me to discuss your
+            project, inquire about services, or simply say hello.
           </div>
         </div>
 

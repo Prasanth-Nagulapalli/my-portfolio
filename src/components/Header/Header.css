@@ -82,7 +82,6 @@
 #header .profile__photo__container .profile__photo {
   aspect-ratio: 1/1.7;
   animation: move 3s linear infinite alternate;
-
   filter: brightness(0.9);
 }
 
