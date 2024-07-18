@@ -1,342 +1,4 @@
 // import React, { useEffect, useRef } from "react";
-// import { FaPaintBrush } from "react-icons/fa";
-// import { BsCodeSquare } from "react-icons/bs";
-// import { TfiWrite } from "react-icons/tfi";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import "./Services.css";
-
-// const Services = () => {
-//   gsap.registerPlugin(ScrollTrigger);
-//   const container = useRef(null);
-//   //Register plugin
-//   // useEffect(() => {
-//   //   const el = container.current;
-//   //   gsap.fromTo(
-//   //     ".service__head",
-//   //     {
-//   //       opacity: 0,
-//   //     },
-//   //     {
-//   //       opacity: 1,
-//   //       scrollTrigger: {
-//   //         trigger: el,
-//   //       },
-//   //     }
-//   //   );
-
-//   //   gsap.fromTo(
-//   //     ".service",
-//   //     {
-//   //       y: -50,
-//   //       opacity: 0,
-//   //     },
-//   //     {
-//   //       y: 0,
-//   //       opacity: 1,
-//   //       duration: 1,
-//   //       scrollTrigger: {
-//   //         trigger: el,
-//   //         start: "-100% bottom",
-//   //         end: "bottom 20%",
-//   //         scrub: true,
-//   //         markers: true,
-//   //       },
-//   //     }
-//   //   );
-//   // }, []);
-
-//   useEffect(() => {
-//     const el = container.current;
-//     const gsapContext = gsap.context(() => {
-//       gsap.fromTo(
-//         ".services__container",
-//         {
-//           x: 500,
-//           opacity: 0.6,
-//         },
-//         {
-//           x: 0,
-//           opacity: 1,
-//           duration: 0.5,
-//           scrollTrigger: {
-//             trigger: el,
-//             start: "top bottom",
-//             end: "top 25%",
-//             scrub: true,
-//             markers: true
-//           },
-//         }
-//       );
-//     }, el);
-
-//     return () => gsapContext.revert();
-//   }, []);
-
-//   return (
-//     <section ref={container} id="services">
-//       <div className="section__wrapper services__container">
-//         <div className="section__header center">
-//           <h2 className="primary__title">Services</h2>
-//           <h3 className="text__muted description">
-//             I transform your ideas, and consequently your desires, into a
-//             distinctive web project that both inspires you and captivates your
-//             customers.
-//           </h3>
-//         </div>
-//         <div className="services__group">
-//           <article className="service">
-//             <div className="service__top">
-//               <div className="icon__container">
-//                 <FaPaintBrush className="icon" />
-//               </div>
-//               <h3 className="title">UI/UX Design</h3>
-//             </div>
-//             <div className="service__middle">
-//               <p className="text__muted description">
-//                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-//                 Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-//                 provident accusamus recusandae eligendi, adipisci sequi
-//                 reiciendis quisquam? Sapiente optio rerum sequi!
-//               </p>
-//             </div>
-//             <div className="service__bottom">
-//               <button className="btn btn__primary">Read more</button>
-//             </div>
-//           </article>
-//           {/* END UI/UX */}
-
-//           <article
-//             className="service"
-//             style={{ "--color-primary": "var(--color-success)" }}
-//           >
-//             <div className="service__top">
-//               <div className="icon__container">
-//                 <BsCodeSquare className="icon" />
-//               </div>
-//               <h3 className="title">Web Development</h3>
-//             </div>
-
-//             <div className="service__middle">
-//               <p className="text__muted description">
-//                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-//                 Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-//                 provident accusamus recusandae eligendi, adipisci sequi
-//                 reiciendis quisquam? Sapiente optio rerum sequi!
-//               </p>
-//             </div>
-//             <div className="service__bottom">
-//               <button className="btn btn__primary">Read more</button>
-//             </div>
-//           </article>
-//           {/* END WEB DEVELOPMENT */}
-
-//           <article
-//             className="service"
-//             style={{ "--color-primary": "blueviolet" }}
-//           >
-//             <div className="service__top">
-//               <div className="icon__container">
-//                 <TfiWrite className="icon" />
-//               </div>
-//               <h3 className="title">Content Creation</h3>
-//             </div>
-
-//             <div className="service__middle">
-//               <p className="text__muted description">
-//                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-//                 Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-//                 provident accusamus recusandae eligendi, adipisci sequi
-//                 reiciendis quisquam? Sapiente optio rerum sequi!
-//               </p>
-//             </div>
-//             <div className="service__bottom">
-//               <button className="btn btn__primary">Read more</button>
-//             </div>
-//           </article>
-//           {/* END CONTENT CREATION */}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Services;
-
-// ? trail for moving each element
-// sucess
-
-// import React, { useEffect, useRef } from 'react';
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { FaPaintBrush } from 'react-icons/fa';
-// import { BsCodeSquare } from 'react-icons/bs';
-// import { TfiWrite } from 'react-icons/tfi';
-// import "./Services.css";
-// gsap.registerPlugin(ScrollTrigger);
-
-// const Services = () => {
-//   const containerRef = useRef(null);
-//   const titleRef = useRef(null);
-//   const descriptionRef = useRef(null);
-//   const serviceRefs = useRef([]);
-
-//   useEffect(() => {
-//     const el = containerRef.current;
-//     const gsapContext = gsap.context(() => {
-//       // Animate the title
-//       gsap.fromTo(
-//         titleRef.current,
-//         {
-//           x: -500,
-//           opacity: 0.6,
-//         },
-//         {
-//           x: 0,
-//           opacity: 1,
-//           duration: 0.5,
-//           scrollTrigger: {
-//             trigger: el,
-//             start: "top bottom",
-//             end: "top 40%",
-//             scrub: true,
-//             // markers: true,
-//           },
-//         }
-//       );
-
-//       // Animate the description
-//       gsap.fromTo(
-//         descriptionRef.current,
-//         {
-//           x: 500,
-//           opacity: 0.6,
-//         },
-//         {
-//           x: 0,
-//           opacity: 1,
-//           duration: 0.5,
-//           scrollTrigger: {
-//             trigger: el,
-//             start: "top bottom",
-//             end: "top 40%",
-//             scrub: true,
-//             // markers: true,
-//           },
-//         }
-//       );
-
-//       // Animate each service element
-//       serviceRefs.current.forEach((service) => {
-//         gsap.fromTo(
-//           service,
-//           {
-//             x: 500,
-//             opacity: 0.6,
-//           },
-//           {
-//             x: 0,
-//             opacity: 1,
-//             duration: 0.5,
-//             scrollTrigger: {
-//               trigger: service,
-//               start: "top bottom",
-//               end: "top 25%",
-//               scrub: true,
-//               // markers: true,
-//             },
-//           }
-//         );
-//       });
-//     }, el);
-
-//     return () => gsapContext.revert();
-//   }, []);
-
-//   return (
-//     <section ref={containerRef} id="services">
-//       <div className="section__wrapper services__container">
-//         <div className="section__header center">
-//           <h2 ref={titleRef} className="primary__title">Services</h2>
-//           <h3 ref={descriptionRef} className="text__muted description">
-//             I transform your ideas, and consequently your desires, into a distinctive web project that both inspires you and captivates your customers.
-//           </h3>
-//         </div>
-//         <div className="services__group">
-//           <article className="service" ref={el => serviceRefs.current[0] = el}>
-//             <div className="service__top">
-//               <div className="icon__container">
-//                 <FaPaintBrush className="icon" />
-//               </div>
-//               <h3 className="title">UI/UX Design</h3>
-//             </div>
-//             <div className="service__middle">
-//               <p className="text__muted description">
-//                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-//                 Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-//                 provident accusamus recusandae eligendi, adipisci sequi
-//                 reiciendis quisquam? Sapiente optio rerum sequi!
-//               </p>
-//             </div>
-//             <div className="service__bottom">
-//               <button className="btn btn__primary">Read more</button>
-//             </div>
-//           </article>
-//           {/* END UI/UX */}
-
-//           <article className="service" ref={el => serviceRefs.current[1] = el} style={{ "--color-primary": "var(--color-success)" }}>
-//             <div className="service__top">
-//               <div className="icon__container">
-//                 <BsCodeSquare className="icon" />
-//               </div>
-//               <h3 className="title">Web Development</h3>
-//             </div>
-//             <div className="service__middle">
-//               <p className="text__muted description">
-//                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-//                 Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-//                 provident accusamus recusandae eligendi, adipisci sequi
-//                 reiciendis quisquam? Sapiente optio rerum sequi!
-//               </p>
-//             </div>
-//             <div className="service__bottom">
-//               <button className="btn btn__primary">Read more</button>
-//             </div>
-//           </article>
-//           {/* END WEB DEVELOPMENT */}
-
-//           <article className="service" ref={el => serviceRefs.current[2] = el} style={{ "--color-primary": "blueviolet" }}>
-//             <div className="service__top">
-//               <div className="icon__container">
-//                 <TfiWrite className="icon" />
-//               </div>
-//               <h3 className="title">Content Creation</h3>
-//             </div>
-//             <div className="service__middle">
-//               <p className="text__muted description">
-//                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-//                 Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-//                 provident accusamus recusandae eligendi, adipisci sequi
-//                 reiciendis quisquam? Sapiente optio rerum sequi!
-//               </p>
-//             </div>
-//             <div className="service__bottom">
-//               <button className="btn btn__primary">Read more</button>
-//             </div>
-//           </article>
-//           {/* END CONTENT CREATION */}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Services;
-
-// ? want little delay
-// ? successfull
-
-// import React, { useEffect, useRef } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { FaPaintBrush } from "react-icons/fa";
@@ -344,6 +6,7 @@
 // import { TfiWrite } from "react-icons/tfi";
 // import "./Services.css";
 // import { useScreenSize } from "../../customHooks";
+
 // gsap.registerPlugin(ScrollTrigger);
 
 // const Services = () => {
@@ -362,7 +25,7 @@
 //         titleRef.current,
 //         {
 //           // x: -500,
-//           x: -250,
+//           x: -120,
 //           opacity: 0.6,
 //         },
 //         {
@@ -385,7 +48,7 @@
 //         descriptionRef.current,
 //         {
 //           // x: 500,
-//           x: 250,
+//           x: 150,
 //           opacity: 0.6,
 //         },
 //         {
@@ -407,11 +70,9 @@
 //       if (screenWidth > 1000) {
 //         const timeline = gsap.timeline({
 //           scrollTrigger: {
-//             trigger: el,
-//             start: "top 80%",
-//             end: "top 10%",
-//             scrub: true,
-//             // markers: true,
+//             trigger: serviceRefs.current,
+//             start: "top 70%",
+//             toggleActions: "play none none reverse",
 //           },
 //         });
 
@@ -419,15 +80,14 @@
 //           serviceRefs.current,
 //           {
 //             // x: 500,
-//             x: 200,
+//             x: 100,
 //             opacity: 0,
 //           },
 //           {
 //             x: 0,
 //             opacity: 1,
-//             duration: 1,
-//             delay: 0.5,
-//             stagger: 0.5,
+//             duration: 0.5,
+//             stagger: 0.3,
 //             ease: "linear",
 //           }
 //         );
@@ -437,20 +97,20 @@
 //           gsap.fromTo(
 //             service,
 //             {
-//               // x: 500,
-//               x: 500,
-//               opacity: 0.6,
+//               x: "100%",
+//               opacity: 0,
 //             },
 //             {
 //               x: 0,
 //               opacity: 1,
-//               duration: 0.5,
+//               // delay: 0.2,
+//               duration: 0.6,
 //               scrollTrigger: {
 //                 trigger: service,
-//                 start: "top bottom",
-//                 end: "top 25%",
-//                 scrub: true,
+//                 start: "top 80%",
+//                 toggleActions: "play none none reverse",
 //                 ease: "linear",
+//                 // markers:true
 //               },
 //             }
 //           );
@@ -458,7 +118,9 @@
 //       }
 //     }, el);
 
-//     return () => gsapContext.revert();
+//     return () => {
+//       gsapContext.revert();
+//     };
 //   }, [screenWidth]);
 
 //   return (
@@ -469,9 +131,8 @@
 //             Services
 //           </h2>
 //           <h3 ref={descriptionRef} className="text__muted description">
-//             I transform your ideas, and consequently your desires, into a
-//             distinctive web project that both inspires you and captivates your
-//             customers.
+//             I transform your innovative ideas into distinctive, high-quality web
+//             projects that inspire you and captivate your customers.
 //           </h3>
 //         </div>
 //         <div className="services__group">
@@ -556,7 +217,7 @@
 
 // export default Services;
 
-// ? tyring to slow down animation using gsap and lenis
+// ? changing text in cards
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -566,6 +227,7 @@ import { BsCodeSquare } from "react-icons/bs";
 import { TfiWrite } from "react-icons/tfi";
 import "./Services.css";
 import { useScreenSize } from "../../customHooks";
+import { MdSettingsApplications } from "react-icons/md";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -708,10 +370,12 @@ const Services = () => {
             </div>
             <div className="service__middle">
               <p className="text__muted description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-                provident accusamus recusandae eligendi, adipisci sequi
-                reiciendis quisquam? Sapiente optio rerum sequi!
+                Crafting intuitive and engaging user interfaces and experiences
+                is my passion. I focus on creating designs that are not only
+                visually appealing but also user-friendly and accessible. My
+                design process includes thorough research, wireframing,
+                prototyping, and user testing to ensure the final product meets
+                your users' needs and exceeds their expectations
               </p>
             </div>
             <div className="service__bottom">
@@ -733,10 +397,13 @@ const Services = () => {
             </div>
             <div className="service__middle">
               <p className="text__muted description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-                provident accusamus recusandae eligendi, adipisci sequi
-                reiciendis quisquam? Sapiente optio rerum sequi!
+                I specialize in building custom websites tailored to your unique
+                needs. From small business sites to large-scale web
+                applications, I ensure each project is built with modern
+                technologies, focusing on performance, accessibility, and user
+                experience. My approach involves understanding your goals,
+                designing a solution that fits, and developing a site that not
+                only looks great but functions seamlessly.
               </p>
             </div>
             <div className="service__bottom">
@@ -752,23 +419,24 @@ const Services = () => {
           >
             <div className="service__top">
               <div className="icon__container">
-                <TfiWrite className="icon" />
+                <MdSettingsApplications className="icon" />
               </div>
-              <h3 className="title">Content Creation</h3>
+              <h3 className="title">API Integration</h3>
             </div>
             <div className="service__middle">
               <p className="text__muted description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Ratione voluptatum earum quam tempore, repellat aut vero ut eum,
-                provident accusamus recusandae eligendi, adipisci sequi
-                reiciendis quisquam? Sapiente optio rerum sequi!
+                In today's connected world, integrating your website with
+                third-party services and APIs can greatly enhance its
+                functionality and user experience. I provide API integration
+                services that connect your site to various external systems,
+                enabling smooth data exchange and additional features
               </p>
             </div>
             <div className="service__bottom">
               <button className="btn btn__primary">Read more</button>
             </div>
           </article>
-          {/* END CONTENT CREATION */}
+          {/* END API Integration */}
         </div>
       </div>
     </section>

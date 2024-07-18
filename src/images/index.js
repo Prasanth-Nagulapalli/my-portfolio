@@ -6,7 +6,12 @@
 // export {default as profile5 } from './profile-5.jpg'
 
 
-export {default as profile1} from './profile-1.png'
+// export {default as profile1} from './profile-1.png'
 export {default as two } from './profile-two.png'
 export {default as profileheader } from './profile-header.png'
 export {default as Littlelemon } from './Littlelemon.png'
+
+
+
+// logos
+

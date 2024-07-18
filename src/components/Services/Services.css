@@ -93,7 +93,13 @@
   font-size: 16px;
   line-height: 25px;
   transition: var(--transition);
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 7;
 }
+
 #services .service:hover .description {
   color: var(--color-text);
 }
