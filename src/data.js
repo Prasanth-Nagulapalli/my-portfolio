@@ -14,7 +14,6 @@ export const menu = [
   { name: "Services" },
   { name: "Skill" },
   { name: "Projects" },
-  // { name: "Testimonial" },
   { name: "Contact" },
 ];
 
@@ -84,7 +83,7 @@ export const projects = [
     id: 2,
     title: "Little Lemon - Table Booking & Online Ordering Application",
     image: Littlelemon,
-    category: "Web",
+    category: "Front-End",
     data: {
       description: `Experience seamless dining with Little Lemon, our comprehensive table booking 
         and online ordering application. Designed to simplify restaurant management and enhance 
@@ -254,96 +253,6 @@ export const projects = [
   // },
 ];
 
-// export const experience = [
-//   {
-//     title: "Frontend Development",
-//     data: [
-//       {
-//         skill: "HTML",
-//         level: "Experienced",
-//       },
-//       {
-//         skill: "CSS",
-//         level: "Experienced",
-//       },
-//       {
-//         skill: "JavaScript",
-//         level: "Experienced",
-//       },
-//       {
-//         skill: "React",
-//         level: "Experienced",
-//       },
-//       {
-//         skill: "Tailwind",
-//         level: "Intermediate",
-//       },
-//       {
-//         skill: "GSAP",
-//         level: "Beginner",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Backend Development",
-//     data: [
-//       {
-//         skill: "Node JS",
-//         level: "Intermediate",
-//       },
-//       {
-//         skill: "Express JS",
-//         level: "Intermediate",
-//       },
-//       {
-//         skill: "MangoDB",
-//         level: "Intermediate",
-//       },
-//       // {
-//       //   skill: "PHP",
-//       //   level: "Experienced",
-//       // },
-//       // {
-//       //   skill: "Python",
-//       //   level: "Intermediate",
-//       // },
-//       // {
-//       //   skill: "MySQL",
-//       //   level: "Experienced",
-//       // },
-//     ],
-//   },
-//   {
-//     title: "Tools",
-//     data: [
-//       {
-//         skill: "Vs Code",
-//         level: "Experienced",
-//       },
-//       {
-//         skill: "Git",
-//         level: "Intermediate",
-//       },
-//       {
-//         skill: "Postman",
-//         level: "Intermediate",
-//       },
-//       {
-//         skill: "Docker",
-//         level: "Intermediate",
-//       },
-//       {
-//         skill: "Figma",
-//         level: "Intermediate",
-//       },
-//       {
-//         skill: "Canva",
-//         level: "Intermediate",
-//       },
-//     ],
-//   },
-// ];
-
 export const experience = [
   {
     title: "Frontend Development",
@@ -370,7 +279,7 @@ export const experience = [
       },
       {
         skill: "GSAP",
-        level: "Beginner",
+        level: "Intermediate",
       },
     ],
   },
