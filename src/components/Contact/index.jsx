@@ -1,105 +1,3 @@
-// import React from "react";
-// import "./Contact.css";
-// import { MdOutlineEmail } from "react-icons/md";
-// import { RiMessengerLine } from "react-icons/ri";
-// import { BsWhatsapp } from "react-icons/bs";
-// import { GrLinkedin } from "react-icons/gr";
-
-// const Contact = () => {
-
-//   return (
-//     <section id="contact">
-//       <div className="section__wrapper contact__container">
-//         <div className="section__header">
-//           <h2 className="primary__title">Contact Me</h2>
-//           <div className="text__muted description">
-//             Ready to take your digital presence to the next level? Whether
-//             you're looking to launch a new website, revamp an existing one, or
-//             need expert advice on the best web technologies, I'm here to help.
-//             Reach out to discuss your project, ask questions, or just say hello.
-//           </div>
-//         </div>
-
-//         <div className="contact__group">
-//           <div className="contact__options">
-//             <article className="contact__option">
-//               <MdOutlineEmail className="contact__icon" />
-//               <h3>Email</h3>
-//               <h5>prasanth.ragava@gmail.com</h5>
-//               <a
-//                 href="prasanth.ragava@gmail.com"
-//                 target="_blank"
-//                 className="btn"
-//               >
-//                 Send a message
-//               </a>
-//             </article>
-
-//             <article className="contact__option">
-//               {/* <RiMessengerLine className='contact__icon'/> */}
-//               <GrLinkedin className="contact__icon" />
-
-//               <h3>Linkedin</h3>
-//               <h5>prasanth</h5>
-//               <a
-//                 href="https://www.linkedin.com/in/prasanth-n-612312252/"
-//                 target="_blank"
-//                 className="btn"
-//                 rel="noreferrer"
-//               >
-//                 Send a message
-//               </a>
-//             </article>
-
-//             <article className="contact__option">
-//               <BsWhatsapp className="contact__icon" />
-//               <h3>WhatsApp</h3>
-//               <h5>+91 7337518778</h5>
-//               <a
-//                 href="https://www.linkedin.com/in/prasanth-n-612312252/"
-//                 target="_blank"
-//                 className="btn"
-//                 rel="noreferrer"
-//               >
-//                 Send a message
-//               </a>
-//             </article>
-//           </div>
-//           {/* END OF CONTACT OPTION */}
-
-//           <form /* ref={form} onSubmit={sendEmail} */>
-//             <input
-//               type="text"
-//               name="name"
-//               placeholder="Your Full name"
-//               required
-//             />
-//             <input
-//               type="email"
-//               name="email"
-//               placeholder="Your Email"
-//               required
-//             />
-//             <textarea
-//               name="message"
-//               rows="7"
-//               placeholder="Your Message"
-//               required
-//             ></textarea>
-//             <button type="submit" className="btn btn__primary">
-//               Send Message
-//             </button>
-//           </form>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Contact;
-
-// ? trail for animations
-
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -316,11 +214,12 @@ const Contact = () => {
               <h3>Email</h3>
               <h5>prasanth.ragava@gmail.com</h5>
               <a
-                href="prasanth.ragava@gmail.com"
+                href="mailto:prasanth.ragava@gmail.com"
                 target="_blank"
                 className="btn"
+                rel="noreferrer"
               >
-                Send a message
+                Send a Email
               </a>
             </article>
 
@@ -328,7 +227,6 @@ const Contact = () => {
               className="contact__option"
               ref={(el) => (serviceRefs.current[1] = el)}
             >
-              {/* <RiMessengerLine className='contact__icon'/> */}
               <GrLinkedin className="contact__icon" />
 
               <h3>Linkedin</h3>
@@ -351,7 +249,7 @@ const Contact = () => {
               <h3>WhatsApp</h3>
               <h5>+91 7337518778</h5>
               <a
-                href="https://www.linkedin.com/in/prasanth-n-612312252/"
+                href="https://api.whatsapp.com/send?phone=+917337518778&text=Hello%2C%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
                 target="_blank"
                 className="btn"
                 rel="noreferrer"
@@ -361,30 +259,6 @@ const Contact = () => {
             </article>
           </div>
           {/* END OF CONTACT OPTION */}
-
-          {/* <form  ref={formRef}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Full name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              rows="7"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit" className="btn btn__primary">
-              Send Message
-            </button>
-          </form> */}
 
           {/* web3form */}
           <form onSubmit={onSubmit} ref={formRef}>
@@ -416,35 +290,6 @@ const Contact = () => {
               Send Message
             </button>
           </form>
-
-          {/* web3form  closed*/}
-
-          {/* web3form */}
-          {/* <form onSubmit={onSubmit} ref={formRef}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Full name"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              rows="7"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <button type="submit" className="btn btn__primary">
-              Send Message
-            </button>
-          </form> */}
-
-          {/* web3form  closed */}
         </div>
       </div>
     </section>

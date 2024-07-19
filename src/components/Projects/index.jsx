@@ -122,6 +122,7 @@ const Projects = () => {
                 data={project.data}
                 stack={project.stack}
                 demoLink={project.data.demoLink}
+                sourceLink={project.data.sourceLink}
               />
             ))}
         </div>

@@ -9,12 +9,16 @@
     left: 0;
     margin: 1%;
     transition: all 0.02s linear;
-    transform: translate(0,  0);
+    transform: translate(0, 0);
     pointer-events: none;
     z-index: 9999;
     cursor: cell;
     background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
-
+@media screen and(max-width:850px) {
+  .custom__cursor {
+    display: none;
+  }
 }

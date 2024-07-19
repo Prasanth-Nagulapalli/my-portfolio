@@ -13,23 +13,6 @@ const About = () => {
 
   //Register plugin
   gsap.registerPlugin(ScrollTrigger);
-  // useEffect(() => {
-  //   const el = container.current;
-  //   gsap.fromTo(
-  //     ".about__container",
-  //     {
-  //       scale: 0.7,
-  //     },
-  //     {
-  //       scale: 1,
-  //       scrollTrigger: {
-  //         trigger: el,
-  //         scrub: true,
-  //         markers: false,
-  //       },
-  //     }
-  //   );
-  // }, []);
 
   useEffect(() => {
     const el = container.current;
@@ -87,7 +70,7 @@ const About = () => {
         },
       }
     );
-  }, []);
+  }, [screenWidth]);
 
   return (
     <section ref={container} id="about">

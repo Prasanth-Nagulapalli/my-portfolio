@@ -29,7 +29,6 @@ const ScreenSizeProvider = ({ children }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, [handleResize]);
 
-
   useEffect(() => {
     const style = document.createElement("style");
     style.id = "customCursorStyle";
@@ -50,8 +49,6 @@ const ScreenSizeProvider = ({ children }) => {
       document.head.removeChild(style);
     };
   }, [showCursor]);
-
-
 
   const contextValue = useMemo(
     () => ({ screenSize, showCursor, setShowCursor }),

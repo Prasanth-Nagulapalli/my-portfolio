@@ -91,6 +91,7 @@ export const projects = [
         Book tables, order meals, and enjoy a smooth user experience that brings your dining service 
         into the digital age.`,
       demoLink: "https://littlelemon-resto.netlify.app/",
+      sourceLink: "https://github.com/Prasanth-Nagulapalli/capestone-project",
     },
     stack: [
       {

@@ -27,9 +27,8 @@ const Card = (props) => {
             <div className={`stack__left`}>Stack</div>
             <div className="stack__right">
               <div className="stack__box__container">
-                
                 {props.stack.map((list, index) => {
-                if (index < 4) {
+                  if (index < 4) {
                     return (
                       <div className="stack__box" key={index}>
                         <div className={`stack__icon__container`}>
@@ -97,11 +96,15 @@ const Card = (props) => {
               target="__blank"
               className="btn btn__primary"
             >
-              Demo
+              Live
             </a>
-            <div className={"btn__share"}>
-              <AiOutlineShareAlt />
-            </div>
+            <a
+              href={props.sourceLink}
+              className="btn"
+              style={{ background: "black" }}
+            >
+              Source
+            </a>
           </div>
         </div>
       </div>

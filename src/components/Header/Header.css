@@ -76,8 +76,6 @@
   max-width: 100%;
   position: relative;
   margin: auto;
-  /* overflow: hidden; */
-  /* height: 100%; */
 }
 #header .profile__photo__container .profile__photo {
   aspect-ratio: 1/1.7;
