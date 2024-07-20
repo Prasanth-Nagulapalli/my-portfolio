@@ -50,9 +50,27 @@ const ScreenSizeProvider = ({ children }) => {
     };
   }, [showCursor]);
 
+  // cursor move positions
+
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      setPosition({ x: event.clientX, y: event.clientY });
+    };
+    document.addEventListener("mousemove", handleMouseMove);
+
+    // Clean up
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  // cursor move positions close
+
   const contextValue = useMemo(
-    () => ({ screenSize, showCursor, setShowCursor }),
-    [screenSize, showCursor, setShowCursor]
+    () => ({ screenSize, showCursor, setShowCursor, position, setPosition }),
+    [screenSize, showCursor, setShowCursor, position, setPosition]
   );
 
   return (

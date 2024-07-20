@@ -1,13 +1,19 @@
 import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { profile1, profileheader } from "../../images";
+import { profileheader } from "../../images";
 import Facts from "./Facts";
 import "./Header.css";
 import { useScreenSize } from "../../customHooks";
-const Header = () => {
+const Header = ({setShowCertificates}) => {
   const { showCursor, setShowCursor } = useScreenSize();
   const [isOn, setIsOn] = useState(false);
+  
+
+  const hanldeShowCertificates = () => {
+    setShowCertificates(true)
+  }
+
 
   const handleMouseEnter = () => {
     if (!isOn && !showCursor) {
@@ -95,13 +101,13 @@ const Header = () => {
             </div>
             <Facts />
             <div className="header__info__bottom">
-              <a
-                href="/prasanth_resume.pdf"
-                download="prasanth_resume.pdf"
+              <button
+
                 className="btn"
+                onClick={hanldeShowCertificates}
               >
-                Download CV
-              </a>
+                Certificates
+              </button>
 
               <button
                 // className="btn"
