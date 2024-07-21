@@ -11,9 +11,8 @@ import gsap from "gsap";
 const Certificates = ({ showCertificates, setShowCertificates }) => {
   const container = useRef(null);
 
-  // const handleHideCertificates = () => {
-  //   setShowCertificates(false);
-  // };
+
+
 
   const handleHideCertificates = () => {
     const el = container.current;

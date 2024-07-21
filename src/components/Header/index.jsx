@@ -106,7 +106,7 @@ const Header = ({setShowCertificates}) => {
                 className="btn"
                 onClick={hanldeShowCertificates}
               >
-                Certificates
+                Certificates & CV
               </button>
 
               <button
