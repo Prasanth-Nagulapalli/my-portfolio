@@ -69,7 +69,7 @@ function App() {
     <div>
       {loading ? (
         <div className="initial__load">
-          <Initial />
+          <Initial  />
           <CustomCursor />
         </div>
       ) : (
@@ -84,7 +84,8 @@ function App() {
             <Contact />
             <Footer />
           </div>
-          {showCursor && <CustomCursor />}
+           <CustomCursor  />
+          {/* {showCursor && <CustomCursor showCursor={showCursor} />} */}
           {showCertificates && (
             <Certificates
               setShowCertificates={setShowCertificates}

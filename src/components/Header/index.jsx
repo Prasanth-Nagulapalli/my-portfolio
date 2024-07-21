@@ -5,15 +5,13 @@ import { profileheader } from "../../images";
 import Facts from "./Facts";
 import "./Header.css";
 import { useScreenSize } from "../../customHooks";
-const Header = ({setShowCertificates}) => {
+const Header = ({ setShowCertificates }) => {
   const { showCursor, setShowCursor } = useScreenSize();
   const [isOn, setIsOn] = useState(false);
-  
 
   const hanldeShowCertificates = () => {
-    setShowCertificates(true)
-  }
-
+    setShowCertificates(true);
+  };
 
   const handleMouseEnter = () => {
     if (!isOn && !showCursor) {
@@ -101,11 +99,7 @@ const Header = ({setShowCertificates}) => {
             </div>
             <Facts />
             <div className="header__info__bottom">
-              <button
-
-                className="btn"
-                onClick={hanldeShowCertificates}
-              >
+              <button className="btn" onClick={hanldeShowCertificates}>
                 Certificates & CV
               </button>
 

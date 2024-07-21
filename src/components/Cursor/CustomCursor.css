@@ -1,4 +1,4 @@
-@media screen and (min-width: 850px) {
+/* @media screen and (min-width: 850px) {
   .custom__cursor {
     width: 70px;
     height: 70px;
@@ -12,6 +12,31 @@
     transform: translate(0, 0);
     pointer-events: none;
     z-index: 9999;
+    cursor: cell;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and(max-width:850px) {
+  .custom__cursor {
+    display: none;
+  }
+} */
+
+/*  ? trying to implement with gsap */
+
+@media screen and (min-width: 850px) {
+  .custom__cursor {
+    border: 2px solid gray;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
     cursor: cell;
     background-color: rgba(0, 0, 0, 0.1);
   }

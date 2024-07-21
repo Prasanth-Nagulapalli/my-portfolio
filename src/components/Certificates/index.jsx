@@ -1,6 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, EffectCreative } from "swiper/modules";
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  EffectCreative,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -10,9 +15,6 @@ import "./certificates.css";
 import gsap from "gsap";
 const Certificates = ({ showCertificates, setShowCertificates }) => {
   const container = useRef(null);
-
-
-
 
   const handleHideCertificates = () => {
     const el = container.current;
@@ -100,6 +102,12 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
           grabCursor={true}
           effect={"creative"}
           navigation={true}
+          autoplay={{
+            delay: 6000,
+            disableOnInteraction: true,
+            stopOnLastSlide: true,
+            
+          }}
           creativeEffect={{
             prev: {
               shadow: true,
@@ -113,7 +121,8 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
               rotate: [0, -100, 0],
             },
           }}
-          modules={[EffectCreative, Pagination, Navigation]}
+          speed={600}
+          modules={[Autoplay, EffectCreative, Pagination, Navigation]}
           className="certificates-swiper"
         >
           <SwiperSlide>
