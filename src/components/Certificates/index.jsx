@@ -106,7 +106,6 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
             delay: 6000,
             disableOnInteraction: true,
             stopOnLastSlide: true,
-            
           }}
           creativeEffect={{
             prev: {
