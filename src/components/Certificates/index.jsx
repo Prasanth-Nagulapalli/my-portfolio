@@ -15,6 +15,9 @@ import "./certificates.css";
 import gsap from "gsap";
 const Certificates = ({ showCertificates, setShowCertificates }) => {
   const container = useRef(null);
+  const titleRef = useRef(null);
+  const descRef = useRef(null);
+  const buttonRef = useRef(null);
 
   const handleHideCertificates = () => {
     const el = container.current;
@@ -35,6 +38,9 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
 
   useEffect(() => {
     const el = container.current;
+    const titleEl = titleRef.current;
+    const descEl = descRef.current;
+    const buttonEl = buttonRef.current;
     if (showCertificates) {
       gsap.fromTo(
         el,
@@ -52,7 +58,7 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
     }
 
     gsap.fromTo(
-      "#certificates  .resume-grid .primary__title",
+      titleEl,
       {
         scale: 0,
         opacity: 0,
@@ -66,7 +72,7 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
     );
 
     gsap.fromTo(
-      "#certificates  .certificate-description",
+      descEl,
       {
         scale: 0,
         opacity: 0,
@@ -79,7 +85,7 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
       }
     );
     gsap.fromTo(
-      "#certificates  .download-button-container",
+      buttonEl,
       {
         scale: 0,
         opacity: 0,
@@ -127,8 +133,13 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
           <SwiperSlide>
             <div className="resume-grid">
               <div className="certificate-text-content">
-                <h4 className="primary__title">Resume</h4>
-                <p className="text__muted description certificate-description">
+                <h4 className="primary__title" ref={titleRef}>
+                  Resume
+                </h4>
+                <p
+                  className="text__muted description certificate-description"
+                  ref={descRef}
+                >
                   My resume highlights my skills in HTML, CSS, JavaScript, and
                   React, showcasing my ability to develop dynamic, responsive
                   web applications. It details my proficiency in frameworks like
@@ -138,7 +149,7 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
                   from Coursera and freeCodeCamp, demonstrating my commitment to
                   continuous learning and professional growth.
                 </p>
-                <div className="download-button-container">
+                <div className="download-button-container" ref={buttonRef}>
                   <a
                     href="/prasanth_resume.pdf"
                     download="prasanth_resume.pdf"

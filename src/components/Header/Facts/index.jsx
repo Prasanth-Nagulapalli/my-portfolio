@@ -3,12 +3,16 @@ import Odometer from "react-odometerjs";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "./Facts.css";
-
+import useHoverImage from "../../../customHooks/useHoverImage";
 const Facts = () => {
   const [experinece, setExperience] = useState(0);
   const [projects, setProjects] = useState(0);
   const [clients, setClients] = useState(0);
   const container = useRef();
+
+  const { imageRef, handleMouseEnterImg, handleMouseLeaveImg } =
+    useHoverImage();
+
   gsap.registerPlugin(useGSAP);
 
   useEffect(() => {
@@ -36,7 +40,13 @@ const Facts = () => {
   );
 
   return (
-    <div className="fact__container" ref={container}>
+    <div
+      className="fact__container"
+      ref={container}
+      // onMouseEnter={handleMouseEnterImg}
+      // onMouseLeave={handleMouseLeaveImg}
+      // style={{position:"relative"}}
+    >
       <div className="fact__item">
         <div className="count__container">
           <Odometer value={experinece} />
@@ -59,6 +69,7 @@ const Facts = () => {
         </div>
         <p className="name">Technologies Masterd</p>
       </div>
+      <span ref={imageRef} className="hoverImage-image"></span>
     </div>
   );
 };
