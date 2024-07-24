@@ -17,8 +17,8 @@ const Facts = () => {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setExperience(1.6);
-      setProjects(10);
+      setExperience(calculateExperience("2021-05-08"));
+      setProjects(20);
       setClients(5);
     }, 3000);
     return () => {
@@ -75,3 +75,12 @@ const Facts = () => {
 };
 
 export default Facts;
+
+const calculateExperience = (startDate) => {
+  const start = new Date(startDate);
+  const now = new Date();
+
+  const years = now.getFullYear() - start.getFullYear();
+
+  return years;
+};

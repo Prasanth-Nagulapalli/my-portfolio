@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { profileheader } from "../../images";
+import { profileHeader } from "../../images";
 import Facts from "./Facts";
 import "./Header.css";
 import { useScreenSize } from "../../customHooks";
@@ -80,7 +80,7 @@ const Header = ({ setShowCertificates }) => {
         </div>
         <div className="column profile__wrapper">
           <div className="profile__photo__container">
-            <img src={profileheader} alt="" className="profile__photo" />
+            <img src={profileHeader} alt="" className="profile__photo" />
           </div>
         </div>
       </div>

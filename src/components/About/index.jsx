@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./About.css";
-import { two } from "../../images";
+import { profileAbout } from "../../images";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useScreenSize } from "../../customHooks";
@@ -77,7 +77,7 @@ const About = () => {
       <div className="section__wrapper about__container">
         <div className="me__container blur-effect">
           <div className="photo__container">
-            <img src={two} alt="" />
+            <img src={profileAbout} alt="profileAbout" />
           </div>
         </div>
         <div className="section__header">

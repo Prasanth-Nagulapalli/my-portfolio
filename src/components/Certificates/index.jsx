@@ -10,7 +10,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { IoIosClose } from "react-icons/io";
-import { resumeImg, resumeImg2 } from "../../images";
+import { resumeImg, metacCedentialImg } from "../../images";
 import "./certificates.css";
 import gsap from "gsap";
 const Certificates = ({ showCertificates, setShowCertificates }) => {
@@ -187,7 +187,7 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
                 </div>
               </div>
               <div className="certificate-image-container">
-                <img src={resumeImg2} alt="Resume" />
+                <img src={metacCedentialImg} alt="Resume" />
               </div>
             </div>
           </SwiperSlide>

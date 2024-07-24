@@ -5,6 +5,7 @@ import { socialHandles } from "../../data";
 import { Link } from "react-scroll";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer id="footer">
       <div className="section__wrapper">
@@ -13,11 +14,12 @@ const Footer = () => {
             <li key={index}>
               <Link
                 className="nav__link"
-                to={list.name.toLowerCase()}
+                // to={list.name.toLowerCase()}
+                to={list.name === "Home" ? "header" : list.name.toLowerCase()}
                 spy={true}
                 smooth={true}
                 offset={-70}
-                duration={500}
+                duration={900}
               >
                 {list.name}
               </Link>
@@ -38,7 +40,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="copyright__container">
-          <h3>Copyright &copy; All right reserved - | 2024</h3>
+          <h3>Copyright &copy; All rights reserved - | {currentYear}</h3>
           <p className="text__muted">Built with love by N Prasanth Kumar </p>
         </div>
       </div>
