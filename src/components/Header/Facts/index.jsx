@@ -10,8 +10,7 @@ const Facts = () => {
   const [clients, setClients] = useState(0);
   const container = useRef();
 
-  const { imageRef, handleMouseEnterImg, handleMouseLeaveImg } =
-    useHoverImage();
+  const { imageRef } = useHoverImage();
 
   gsap.registerPlugin(useGSAP);
 
@@ -40,13 +39,7 @@ const Facts = () => {
   );
 
   return (
-    <div
-      className="fact__container"
-      ref={container}
-      // onMouseEnter={handleMouseEnterImg}
-      // onMouseLeave={handleMouseLeaveImg}
-      // style={{position:"relative"}}
-    >
+    <div className="fact__container" ref={container}>
       <div className="fact__item">
         <div className="count__container">
           <Odometer value={experinece} />

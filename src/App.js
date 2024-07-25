@@ -20,7 +20,7 @@ function App() {
 
   const [showCertificates, setShowCertificates] = useState(false);
 
-  const { showCursor, setShowCursor } = useScreenSize();
+  const { setShowCursor } = useScreenSize();
 
   // lenis smooth scroll
   useEffect(() => {

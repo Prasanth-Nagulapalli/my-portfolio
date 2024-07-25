@@ -48,12 +48,6 @@
   overflow: hidden;
 }
 
-/* .card .picture img{
-  object-fit: contain;
-  object-fit: cover;
-  
-} */
-
 .card .card__details {
   flex: 1;
   text-align: left;

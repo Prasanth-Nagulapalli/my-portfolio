@@ -1,10 +1,8 @@
-
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FaPaintBrush } from "react-icons/fa";
 import { BsCodeSquare } from "react-icons/bs";
-import { TfiWrite } from "react-icons/tfi";
 import "./Services.css";
 import { useScreenSize } from "../../customHooks";
 import { MdSettingsApplications } from "react-icons/md";

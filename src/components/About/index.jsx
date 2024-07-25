@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useScreenSize } from "../../customHooks";
 const About = () => {
   const container = useRef(null);
-  // const { screenWidth } = useScreenSize().screenSize;
 
   const { screenSize } = useScreenSize();
   const { screenWidth } = screenSize;

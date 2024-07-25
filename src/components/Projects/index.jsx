@@ -5,21 +5,6 @@ import { projects } from "../../data";
 import Card from "./Card";
 import gsap from "gsap";
 
-// const tabs = [
-//   {
-//     name: "All",
-//   },
-//   {
-//     name: "Web",
-//   },
-//   {
-//     name: "UI/UX",
-//   },
-//   {
-//     name: "Apps",
-//   },
-// ];
-
 const tabs = [
   {
     name: "All",
@@ -37,7 +22,8 @@ const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [offset, setOffset] = useState(0);
   const [indicatorWidth, setIndicatorWidth] = useState(0);
-  const itemsEls = useRef(new Array());
+  const itemsEls = useRef([]);
+  // const itemsEls = useRef(new Array());
 
   useEffect(() => {
     const prevEl = itemsEls.current.filter((_, index) => index < activeIndex);
@@ -95,10 +81,10 @@ const Projects = () => {
             <button
               key={index}
               ref={(el) => (itemsEls.current[index] = el)}
-              // onClick={() => {
-              //   setActiveIndex(index);
-              //   setProjects(tab.name);
-              // }}
+              onClick={() => {
+                setActiveIndex(index);
+                setProjects(tab.name);
+              }}
             >
               {tab.name}
             </button>

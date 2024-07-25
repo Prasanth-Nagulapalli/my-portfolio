@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { MdExpandMore } from "react-icons/md";
-import { AiOutlineShareAlt } from "react-icons/ai";
 import "./Card.css";
 
 const Card = (props) => {
