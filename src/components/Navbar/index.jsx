@@ -99,9 +99,17 @@ const Navbar = () => {
           ))}
         </div>
         <div className="column nav__buttons__group">
-          <button className="btn btn__primary">
+          <Link
+            className="btn btn__primary"
+            to={"contact"}
+            smooth={true}
+            duration={600}
+          >
             Hire Me <FaArrowUpRightFromSquare />
-          </button>
+          </Link>
+          {/* <button className="btn btn__primary">
+            Hire Me <FaArrowUpRightFromSquare />
+          </button> */}
           <FaBarsStaggered
             className="menu"
             onClick={() => setShowSidebar(!showSidebar)}

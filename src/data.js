@@ -58,6 +58,28 @@ export const projects = [
       },
     ],
   },
+  {
+    id: 3,
+    title: "Little Lemon - Table Booking & Online Ordering Application",
+    image: littleLemonThumbnail,
+    category: "Front-End",
+    data: {
+      description: `Experience seamless dining with Little Lemon, our comprehensive table booking 
+        and online ordering application. Designed to simplify restaurant management and enhance 
+        customer convenience, this project integrates an intuitive UI with robust functionality. 
+        Book tables, order meals, and enjoy a smooth user experience that brings your dining service 
+        into the digital age.`,
+      demoLink: "https://littlelemon-resto.netlify.app/",
+      sourceLink: "https://github.com/Prasanth-Nagulapalli/capestone-project",
+    },
+    stack: [
+      {
+        name: "React.js",
+        icon: <DiReact />,
+        iconColor: "skyblue",
+      },
+    ],
+  },
 ];
 
 export const experience = [
@@ -115,7 +137,7 @@ export const experience = [
         level: "Experienced",
       },
       {
-        skill: "Git",
+        skill: "Git/GitHub",
         level: "Intermediate",
       },
       {

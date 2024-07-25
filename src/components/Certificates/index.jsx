@@ -10,7 +10,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { IoIosClose } from "react-icons/io";
-import { resumeImg, metacCedentialImg } from "../../images";
+import {
+  resumeImg,
+  metaCredentialImg,
+  freeCodeCampCredentialImg,
+} from "../../images";
 import "./certificates.css";
 import gsap from "gsap";
 const Certificates = ({ showCertificates, setShowCertificates }) => {
@@ -167,7 +171,7 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
           <SwiperSlide>
             <div className="resume-grid">
               <div className="certificate-text-content">
-                <h1 className="primary__title">Meta Front-End Certification</h1>
+                <h1 className="primary__title">Meta Front-End Credential</h1>
                 <p className="text__muted description certificate-description">
                   As a Meta Front-End certified developer, I have completed a
                   comprehensive program consisting of nine courses on Coursera.
@@ -187,7 +191,36 @@ const Certificates = ({ showCertificates, setShowCertificates }) => {
                 </div>
               </div>
               <div className="certificate-image-container">
-                <img src={metacCedentialImg} alt="Resume" />
+                <img src={metaCredentialImg} alt="Resume" />
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="resume-grid">
+              <div className="certificate-text-content">
+                <h1 className="primary__title">freeCodeCamp Credential</h1>
+                <p className="text__muted description certificate-description">
+                  I have earned the Responsive Web Design certification from
+                  freeCodeCamp, which involved mastering the fundamentals of
+                  HTML and CSS. This certification has equipped me with the
+                  skills to create responsive, user-friendly web pages that look
+                  great on any device. Through practical projects, I have gained
+                  hands-on experience in designing and developing web pages that
+                  adapt to different screen sizes and provide an optimal user
+                  experience.
+                </p>
+
+                <div className="download-button-container">
+                  <a
+                    href="https://freecodecamp.org/certification/fccc231904a-c286-4dd5-8850-515edd273622/responsive-web-design"
+                    className="btn btn__primary"
+                  >
+                    Go To
+                  </a>
+                </div>
+              </div>
+              <div className="certificate-image-container">
+                <img src={freeCodeCampCredentialImg} alt="Resume" />
               </div>
             </div>
           </SwiperSlide>

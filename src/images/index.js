@@ -6,7 +6,8 @@ export { default as profileAbout } from "./profileAbout.png";
 // ? resume and credentials
 
 export { default as resumeImg } from "./prasanthResumeImg.png";
-export { default as metacCedentialImg } from "./metacCedential.png";
+export { default as metaCredentialImg } from "./metaCredential.png";
+export { default as freeCodeCampCredentialImg } from "./freeCodeCampCredential.png";
 
 // ? project thumbnails
 

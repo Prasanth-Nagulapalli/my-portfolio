@@ -61,8 +61,8 @@ const Header = ({ setShowCertificates }) => {
                 DEVELOPER
               </h1>
               <p className="header__decription text__muted">
-                "I build intuitive web applications, turning complex
-                requirements into seamless user experiences."
+                I build intuitive web applications, turning complex
+                requirements into seamless user experiences.
               </p>
             </div>
             <Facts />
