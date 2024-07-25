@@ -41,6 +41,8 @@ const Card = (props) => {
                         </div>
                       </div>
                     );
+                  } else {
+                    return null;
                   }
                 })}
               </div>
@@ -79,6 +81,8 @@ const Card = (props) => {
                               </div>
                             </div>
                           );
+                        } else {
+                          return null;
                         }
                       })}
                     </div>
