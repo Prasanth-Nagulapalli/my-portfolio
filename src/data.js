@@ -28,7 +28,7 @@ export const projects = [
     category: "Front-End",
     data: {
       description: `Explore my portfolio, a showcase of my web development expertise. Built with React.js, it features dynamic animations powered by GSAP, seamless scrolling with Lenis, and interactive carousels using SwiperJS. Each project is detailed with live demos and technology insights, reflecting my ability to craft engaging, user-friendly web applications. The design emphasizes clarity and accessibility, providing an intuitive experience as you navigate through my work and achievements.`,
-      demoLink: "https://google.com/",
+      demoLink: "https://prasanth-dev.netlify.app/",
       sourceLink: "https://github.com/Prasanth-Nagulapalli/my-portfolio",
     },
     stack: [
