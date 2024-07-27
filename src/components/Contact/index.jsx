@@ -5,14 +5,20 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import { GrLinkedin } from "react-icons/gr";
 import { useScreenSize } from "../../customHooks";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const Contact = () => {
   const { screenWidth } = useScreenSize().screenSize;
+  const { refreshScroll } = useScreenSize();
 
   const containerRef = useRef(null);
   const contactRef = useRef(null);
   const formRef = useRef(null);
   const serviceRefs = useRef([]);
   const descRef = useRef();
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, [refreshScroll]);
 
   // form submit
 
@@ -103,8 +109,9 @@ const Contact = () => {
           // ease: "bounce.out",
           scrollTrigger: {
             trigger: contactRef.current,
-            start: "top 90%",
+            start: "top 85%",
             toggleActions: "play none none reverse",
+            // markers: true,
           },
         }
       );
@@ -125,7 +132,7 @@ const Contact = () => {
           opacity: 1,
           scrollTrigger: {
             trigger: screenWidth > 1024 ? formRef.current : formRef.current,
-            start: "top 90%",
+            start: "top 85%",
             toggleActions: "play none none reverse",
             ease: "linear",
             // markers:true

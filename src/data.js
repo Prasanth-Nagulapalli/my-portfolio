@@ -1,5 +1,6 @@
 import { DiReact } from "react-icons/di";
-import { SiUpwork } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress, SiMongodb, SiUpwork } from "react-icons/si";
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { FaWix, FaWordpress } from "react-icons/fa";
 import {
@@ -39,9 +40,41 @@ export const projects = [
       },
     ],
   },
-
   {
     id: 2,
+    title: "Connectify - A MERN Stack Social Media App",
+    image: connectifyThumbnail,
+    category: "Full-stack",
+    data: {
+      description: `Connectify is a dynamic social media application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to add images, connect with others, and share posts. The app leverages Redux for state management and Material UI for a sleek and responsive user interface. Join Connectify to experience a seamless and interactive social networking platform.`,
+      demoLink: "https://connectifying.netlify.app/",
+      sourceLink: "https://github.com/Prasanth-Nagulapalli/Connectify",
+    },
+    stack: [
+      {
+        name: "MongoDB",
+        icon: <SiMongodb />,
+        iconColor: "limegreen",
+      },
+      {
+        name: "ExpressJs",
+        icon: <SiExpress />,
+      },
+      {
+        name: "React.js",
+        icon: <DiReact />,
+        iconColor: "skyblue",
+      },
+      {
+        name: "NodeJs",
+        icon: <FaNodeJs />,
+        iconColor: "green",
+      },
+    ],
+  },
+
+  {
+    id: 3,
     title: "Little Lemon - Table Booking & Online Ordering Application",
     image: littleLemonThumbnail,
     category: "Front-End",
@@ -63,7 +96,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Shop Dashboard - A Simple React Application",
     image: admindashboardThumbnail,
     category: "Front-End",
@@ -81,7 +114,7 @@ export const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "TaxHood - Tax Refund Service Website",
     image: taxhoodThumbnail,
     category: "Front-End",
@@ -99,7 +132,7 @@ export const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Custom CSS Enhancements for iGRACE Professional Hair & Beauty",
     image: igraceThumbnail,
     category: "Front-End",
@@ -112,24 +145,6 @@ export const projects = [
       {
         name: "WordPress",
         icon: <FaWordpress />,
-        iconColor: "skyblue",
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "Connectify - A MERN Stack Social Media App",
-    image: connectifyThumbnail,
-    category: "Full-stack",
-    data: {
-      description: `Connectify is a dynamic social media application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to add images, connect with others, and share posts. The app leverages Redux for state management and Material UI for a sleek and responsive user interface. Join Connectify to experience a seamless and interactive social networking platform.`,
-      demoLink: "https://connectifying.netlify.app/",
-      sourceLink: "https://github.com/Prasanth-Nagulapalli/Connectify",
-    },
-    stack: [
-      {
-        name: "React.js",
-        icon: <DiReact />,
         iconColor: "skyblue",
       },
     ],

@@ -10,6 +10,8 @@ import React, {
 const ScreenSizeContext = createContext();
 
 const ScreenSizeProvider = ({ children }) => {
+  const [refreshScroll, setRefreshScroll] = useState(true);
+
   const [showCursor, setShowCursor] = useState(true);
 
   const [screenSize, setScreenSize] = useState({
@@ -69,8 +71,24 @@ const ScreenSizeProvider = ({ children }) => {
   // cursor move positions close
 
   const contextValue = useMemo(
-    () => ({ screenSize, showCursor, setShowCursor, position, setPosition }),
-    [screenSize, showCursor, setShowCursor, position, setPosition]
+    () => ({
+      screenSize,
+      showCursor,
+      setShowCursor,
+      position,
+      setPosition,
+      refreshScroll,
+      setRefreshScroll,
+    }),
+    [
+      screenSize,
+      showCursor,
+      setShowCursor,
+      position,
+      setPosition,
+      refreshScroll,
+      setRefreshScroll,
+    ]
   );
 
   return (
