@@ -101,13 +101,32 @@ const Card = (props) => {
             >
               Live
             </a>
-            <a
-              href={props.sourceLink}
-              className="btn"
-              style={{ background: "black" }}
-            >
-              Source
-            </a>
+            {props.sourceLink ? (
+              <a
+                href={props.sourceLink || "#"}
+                className="btn"
+                style={{
+                  background: "black",
+                }}
+              >
+                Source
+              </a>
+            ) : null}
+            {/* // <a
+            //   href={props.sourceLink || "#"}
+            //   className="btn"
+            //   style={{
+            //     background: "black",
+            //     cursor: !props.sourceLink ? "not-allowed" : "pointer",
+            //   }}
+            //   onClick={(e) => {
+            //     if (!props.sourceLink) {
+            //       e.preventDefault();
+            //     }
+            //   }}
+            // >
+            //   Source
+            // </a> */}
           </div>
         </div>
       </div>

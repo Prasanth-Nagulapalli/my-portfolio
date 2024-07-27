@@ -100,13 +100,15 @@ const Navbar = () => {
         </div>
         <div className="column nav__buttons__group">
           <Link
+            style={{ fontFamily: "Arial" }}
             className="btn btn__primary"
             to={"contact"}
             smooth={true}
-            duration={600}
+            duration={900}
           >
             Hire Me <FaArrowUpRightFromSquare />
           </Link>
+
           {/* <button className="btn btn__primary">
             Hire Me <FaArrowUpRightFromSquare />
           </button> */}

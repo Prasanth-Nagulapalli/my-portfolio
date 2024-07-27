@@ -112,6 +112,16 @@ const Projects = () => {
               />
             ))}
         </div>
+        <button
+          className="btn btn__primary"
+          style={{
+            margin: "25px auto 0",
+            display: "block",
+            transform: "translateY(25px)",
+          }}
+        >
+          Show more
+        </button>
       </div>
     </section>
   );

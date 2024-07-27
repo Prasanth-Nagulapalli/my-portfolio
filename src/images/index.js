@@ -13,3 +13,7 @@ export { default as freeCodeCampCredentialImg } from "./freeCodeCampCredential.p
 
 export { default as portfolioThumbnail } from "./portfolioThumbnail.png";
 export { default as littleLemonThumbnail } from "./littleLemonThumbnail.png";
+export { default as admindashboardThumbnail } from "./admindashboardThumbnail.png";
+export { default as taxhoodThumbnail } from "./taxhoodThumbnail.png";
+export { default as igraceThumbnail } from "./igraceThumbnail.png";
+export { default as connectifyThumbnail } from "./connectifyThumbnail.png";
