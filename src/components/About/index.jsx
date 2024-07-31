@@ -94,7 +94,7 @@ const About = () => {
             official documentation like{" "}
             <span className="about__highlight__text">MDN Web Docs </span> .
           </p>
-          <button className="btn btn__primary">Read more</button>
+          {/* <button className="btn btn__primary">Read more</button> */}
         </div>
       </div>
     </section>
