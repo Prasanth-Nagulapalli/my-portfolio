@@ -28,6 +28,11 @@ const ScreenSizeProvider = ({ children }) => {
     });
   }, []);
 
+  useEffect(() => {
+    setRefreshScroll(!refreshScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [screenSize.documentHeight]);
+
   // useEffect(() => {
   //   window.addEventListener("resize", handleResize);
   //   return () => window.removeEventListener("resize", handleResize);
