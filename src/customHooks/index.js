@@ -28,10 +28,10 @@ const ScreenSizeProvider = ({ children }) => {
     });
   }, []);
 
-  useEffect(() => {
-    setRefreshScroll(!refreshScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [screenSize.documentHeight]);
+  // useEffect(() => {
+  //   setRefreshScroll(!refreshScroll);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [screenSize]);
 
   // useEffect(() => {
   //   window.addEventListener("resize", handleResize);
