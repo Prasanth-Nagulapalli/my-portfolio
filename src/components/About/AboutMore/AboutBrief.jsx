@@ -5,7 +5,7 @@ import { useScreenSize } from "../../../customHooks";
 import { Link } from "react-scroll";
 const AboutMeBrief = ({ showBreif, setShowBreif }) => {
   const { screenWidth } = useScreenSize().screenSize;
-
+  const { refreshScroll, setRefreshScroll } = useScreenSize();
   useEffect(() => {
     const containerAnimation = gsap.fromTo(
       ".about__container",
@@ -15,6 +15,7 @@ const AboutMeBrief = ({ showBreif, setShowBreif }) => {
         opacity: 1,
         duration: 0.8,
         ease: "power1",
+        onComplete: () => setRefreshScroll(!refreshScroll),
       }
     );
 
