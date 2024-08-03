@@ -260,7 +260,7 @@ const ServiceCardsData = [
 ];
 
 const Services = () => {
-  const { screenWidth } = useScreenSize().screenSize;
+  const { screenWidth, documentHeight } = useScreenSize().screenSize;
   const { refreshScroll, setRefreshScroll } = useScreenSize();
   const containerRef = useRef(null);
   const titleRef = useRef(null);
@@ -274,6 +274,10 @@ const Services = () => {
     setShowMore((prev) => (prev === cardId ? null : cardId));
     setRefreshScroll(!refreshScroll);
   };
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, [refreshScroll, documentHeight]);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -409,10 +413,6 @@ const Services = () => {
       };
     }
   }, [screenWidth]);
-
-  useEffect(() => {
-    ScrollTrigger.refresh();
-  }, [refreshScroll]);
 
   useEffect(() => {
     handleShowMore(null);
