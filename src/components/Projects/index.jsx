@@ -147,7 +147,8 @@ const Projects = () => {
     projects.slice(0, 3)
   );
   const [activeIndex, setActiveIndex] = useState(0);
-  const [showAll, setShowAll] = useState(false); // Toggles between showing all or limited projects
+  const [showAll, ] = useState(false); // Toggles between showing all or limited projects
+  // const [showAll, setShowAll] = useState(false); // Toggles between showing all or limited projects
   const [offset, setOffset] = useState(0);
   const [indicatorWidth, setIndicatorWidth] = useState(0);
   const itemsEls = useRef([]);
@@ -173,20 +174,20 @@ const Projects = () => {
     setRefreshScroll(!refreshScroll);
   };
 
-  const handleShowMore = () => {
-    setShowAll((prevShowAll) => !prevShowAll);
-    const category = tabs[activeIndex].name;
-    const filteredProjects =
-      category === "All"
-        ? projects
-        : projects.filter(
-            (item) => item.category.toLowerCase() === category.toLowerCase()
-          );
-    setDisplayableProjects(
-      filteredProjects.slice(0, showAll ? 3 : filteredProjects.length)
-    ); // Toggle between showing all or 3 projects
-    setRefreshScroll(!refreshScroll);
-  };
+  // const handleShowMore = () => {
+  //   setShowAll((prevShowAll) => !prevShowAll);
+  //   const category = tabs[activeIndex].name;
+  //   const filteredProjects =
+  //     category === "All"
+  //       ? projects
+  //       : projects.filter(
+  //           (item) => item.category.toLowerCase() === category.toLowerCase()
+  //         );
+  //   setDisplayableProjects(
+  //     filteredProjects.slice(0, showAll ? 3 : filteredProjects.length)
+  //   ); // Toggle between showing all or 3 projects
+  //   setRefreshScroll(!refreshScroll);
+  // };
 
   useEffect(() => {
     gsap.fromTo(
