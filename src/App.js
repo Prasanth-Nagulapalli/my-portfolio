@@ -49,15 +49,17 @@ function App() {
   // lenis smooth scroll close
 
   useEffect(() => {
-    setTimeout(() => {
-      gsap.to(".initial__load", {
-        opacity: 0,
-        duration: 0.4,
-        onComplete: () => setLoading(false),
-      });
-      setShowCursor(false);
-    }, 1600);
-  }, [setShowCursor]);
+    if (loading) {
+      setTimeout(() => {
+        gsap.to(".initial__load", {
+          opacity: 0,
+          duration: 0.4,
+          onComplete: () => setLoading(false),
+        });
+        setShowCursor(false);
+      }, 1600);
+    }
+  }, [loading, setShowCursor]);
 
   useEffect(() => {
     if (!loading) {

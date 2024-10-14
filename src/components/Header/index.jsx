@@ -91,7 +91,7 @@ const Header = ({ setShowCertificates }) => {
 export default Header;
 
 const ButtonsGroup = ({
-  handleShowCertificates,
+  // handleShowCertificates,
   showCursor,
   isOn,
   handleCursorClick,
@@ -101,9 +101,12 @@ const ButtonsGroup = ({
   const { screenWidth } = useScreenSize().screenSize;
   return (
     <>
-      <button className="btn" onClick={handleShowCertificates}>
+      <button style={{ cursor: "not-allowed" }} className="btn" disabled>
         CV & Credentials
       </button>
+      {/* <button className="btn" onClick={handleShowCertificates}>
+        CV & Credentials
+      </button> */}
       {screenWidth >= 850 ? (
         <button
           className={showCursor && isOn ? "btn btn__primary" : "btn"}

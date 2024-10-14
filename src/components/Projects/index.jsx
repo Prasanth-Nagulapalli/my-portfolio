@@ -255,8 +255,10 @@ const Projects = () => {
               margin: "25px auto 0",
               display: "block",
               transform: "translateY(25px)",
+              cursor:"not-allowed"
             }}
-            onClick={handleShowMore}
+            // onClick={handleShowMore}
+            disabled
           >
             {showAll ? "Show less" : "Show more"}
           </button>
